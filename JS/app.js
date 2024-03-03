@@ -5,6 +5,7 @@
 
 // All post Data API
 const loadAllData = async () => {
+ 
    const res = await fetch("https://openapi.programming-hero.com/api/retro-forum/posts")
    const data = await res.json() 
    const loadData = data.posts;
@@ -30,6 +31,8 @@ const loadAllLatestPost = async () => {
 
 const postSearchData =async (searchText) => {
 
+  handleSpinner("block");
+
    const res = await fetch(`https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}`)
    const data = await res.json()
    const searchID = data.posts;
@@ -43,6 +46,8 @@ const postSearchData =async (searchText) => {
 
 // // All Show Card Data Function
 const showCardData = (searchID) => {
+
+  handleSpinner("none");
   
   const cardDiv = document.getElementById('card');
 
@@ -60,10 +65,10 @@ const showCardData = (searchID) => {
 
 
 
-    const leftSide = document.getElementById('left-side');
+
 
     const createDiv = document.createElement('div');
-    const createDivLeftSide = document.createElement('div');
+   
  
 
     createDiv.innerHTML = `
@@ -123,7 +128,7 @@ const showCardData = (searchID) => {
   
   
         <div class="mt-10 lg:mt-0 ">
-          <button>
+          <button onclick="btnClick()" >
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
               <g clip-path="url(#clip0_19_556)">
                 <path
@@ -152,16 +157,7 @@ const showCardData = (searchID) => {
 
 
     
-    createDivLeftSide.innerHTML = `
- 
-    <div class="flex  mt-7 justify-between text-base font-medium">
-    <h1 class="w-3/4">10 Kids Unaware of Their Halloween Costume</h1>
-    <div class="ml-5"><i class="fa-regular fa-eye text-center"></i></div>
 
-    <h2 class="  text-[#131318] ml-3 text-base">1,568</h2>
-    </div>
- 
-    `;
 
     
     cardDiv.appendChild(createDiv);
@@ -183,6 +179,8 @@ const showCardData = (searchID) => {
 
 // // All showSearchData Data Function
 const showSearchData = (searchID) => {
+
+  handleSpinner("none");
   
   const cardDiv = document.getElementById('card');
 
@@ -364,7 +362,7 @@ const latestPostData = (latestPosts) => {
             </clipPath>
           </defs>
         </svg>
-        <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author?.posted_date}</p>
+        <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author?.posted_date || 'No publish date' }</p>
       </div>
 
       <h2 class="Mulish text-[18px] mt-4 text-[#12132D] font-extrabold">${latestPost.title}</h2>
@@ -379,7 +377,7 @@ const latestPostData = (latestPosts) => {
         </div>
         <div class="ml-4">
           <h5 class="Mulish text-base font-bold ">${latestPost.author.name}</h5>
-          <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author.name}</p>
+          <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author.designation || "Designation "}</p>
         </div>
       </div>
 
@@ -411,10 +409,42 @@ const singlePostSearch = () => {
 
  
 }
+
+
+
+// Loading Spinner
+const handleSpinner = (status) => {
+
+  setTimeout(() => {
+    document.getElementById("loading-spiner").style.display = status;
+  }, 2000);
+  
+};
+
  
 
 
+const btnClick = () => {
+  // console.log("ok")
 
+
+  const leftSide = document.getElementById('left-side');
+  const createDivLeftSide = document.createElement('div');
+  
+
+  createDivLeftSide.innerHTML = `
+ 
+  <div class="flex justify-between mt-7   text-base font-medium">
+  <h1 class="w-3/4">10 Kids Unaware of Their Halloween Costume</h1>
+  <div class="ml-5"><i class="fa-regular fa-eye text-center"></i></div>
+
+  <h2 class="  text-[#131318] ml-3 text-base">1,568</h2>
+  </div>
+ 
+
+  `;
+  leftSide.appendChild(createDivLeftSide)
+}
 
 
 loadAllLatestPost()

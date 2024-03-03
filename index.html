@@ -116,8 +116,8 @@
             <div class="lg:flex justify-between h-[700px] lg:h-[450px] lg:w-[1300px] items-center ">
 
               <div class=" lg:mr-56  lg:text-left">
-                <h1 class="text-5xl lg:text-6xl font-black mb-10">Welcome to the <br><span
-                    class="text-gradient-to-r from-[#797DFC] to-[#797DFC]">ReTro</span> Forum</h1>
+                <h1 class="text-6xl lg:text-6xl font-black mb-10">Welcome to the <br><span
+                    class=" text-transparent bg-clip-text bg-gradient-to-r from-[#797DFC] to-[#797DFC]">ReTro</span> Forum</h1>
                 <p class="Mulish text-white text-[20px] mt-7 lg:mt-5 lg:w-3/4">Share your favorite opinion and win and
                   wp forum coffee mug!</p>
                 <div class=" join  bg-white rounded-2xl mt-10">
@@ -160,9 +160,8 @@
     <!-- Hero Section Start End -->
 
 
-
     <!-- Let’s Discuss Section Start Here -->
-    <section class="my-36">
+    <section class="my-">
 
       <div>
 
@@ -173,6 +172,15 @@
             run unit tests and view the results directly within the app. The integrated testing features allow for a
             streamlined .</p>
         </div>
+
+
+        <!-- Loading Spinner Section Start Here-->
+
+        <div id="loading-spiner" class="loading-spiner ml-[500px]">
+          <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="">
+        </div>
+
+        <!-- Loading Spinner  End Here-->
 
 
         <!-- Card Section Start-->
@@ -188,38 +196,38 @@
 
           <!-- Left Side Title -->
 
-          <div id="left-side" class="col-span-12 lg:col-span-5 bg-slate-300 rounded-3xl ">
+          <div class=" col-span-12 lg:col-span-5 bg-slate-300 rounded-3xl ">
 
 
-            <div class="    text-[#12132D] p-12      ">
+            <div class="text-[#12132D] p-12      ">
+
               <div class="flex justify-between text-2xl font-medium">
                 <h1>Title</h1>
                 <div class="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <g clip-path="url(#clip0_19_903)">
-                    <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
                     </g>
                     <defs>
-                    <clipPath id="clip0_19_903">
-                    <rect width="24" height="24" fill="white"/>
-                    </clipPath>
+                      <clipPath id="clip0_19_903">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
                     </defs>
-                    </svg>
+                  </svg>
                   <p class="ml-2">Mark as read (<span>0</span>)</p>
                 </div>
               </div>
 
 
+              <div id="left-side">
 
-              <!-- <div class="flex  mt-7 justify-between text-base font-medium">
-                <h1 class="w-3/4">10 Kids Unaware of Their Halloween Costume</h1>
-                <div class="ml-5"><i class="fa-regular fa-eye text-center"></i></div>
-
-                <h2 class="  text-[#131318] ml-3 text-base">1,568</h2>
               </div>
 
-            </div> -->
+
+            </div>
 
           </div>
         </div>
@@ -305,12 +313,12 @@
 
   </main>
 
-  <footer class="footer footer-center p-10 bg-[#12132D] text-primary-content">
+  <footer class="footer footer-center p-10 bg-[#fff]   text-[#12132D]">
     <aside>
       <h1>
         <img src="images/logo.png" alt="">
       </h1>
-      <p class="font-bold lg:w-3/4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+      <p class="font-bold mt-4 lg:w-3/4">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
         piece of classical Latin literature from 45 BC</p>
     </aside>
     <nav>
@@ -337,11 +345,11 @@
           </svg></a>
       </div>
     </nav>
-    <div class="divider"></div>
 
-    <footer class="footer footer-center p-10 bg-[#12132D] text-primary-content">
+
+    <footer class="footer footer-center p-10 bg-[#fff] text-[#12132D]">
       <aside>
-        <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+        <p class="font-medium  opacity-60  text-sm  mx-auto ">Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
       </aside>
     </footer>
   </footer>
