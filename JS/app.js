@@ -372,7 +372,7 @@ const latestPostData = (latestPosts) => {
         </div>
         <div class="ml-4">
           <h5 class="Mulish text-base font-bold ">${latestPost.author.name}</h5>
-          <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author.designation || "Designation "}</p>
+          <p class="ml-1 text-[#12132D] opacity-70">${latestPost.author.designation || "Unknown"}</p>
         </div>
       </div>
 
