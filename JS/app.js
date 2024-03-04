@@ -189,7 +189,7 @@ const showSearchData = (searchID) => {
     // console.log(post);
     let isActiveBtn = '';
     if (post.isActive) {
-      isActiveBtn = `<span class="flex w-8 h-8 lg:w-5 lg:h-5 me-3 absolute   ml-[105px] lg:ml-[100px] bg-green-500 rounded-full"></span>`;
+      isActiveBtn = `<span class="flex w-8 h-8 lg:w-5 lg:h-5 me-3 absolute  ml-[105px] lg:ml-[100px] bg-green-500 rounded-full"></span>`;
     }
     else {
       isActiveBtn = `<span class="flex w-8 h-8 lg:w-5 lg:h-5 me-3 absolute ml-[105px] lg:ml-[100px] bg-red-500 rounded-full"></span>`;
@@ -205,9 +205,9 @@ const showSearchData = (searchID) => {
     createDiv.innerHTML = `
     <div class="lg:flex relative p-6 border rounded-lg ">
     
-    <div class="lg:ml-10">
+    <div class="ml-24 lg:ml-10">
     ${isActiveBtn}
-      <img class="w-[150px] h-[150px] lg:w-[150px] lg:h-[120px] rounded-lg" src="${post.image}" alt="">
+      <img class="w-[150px] h-[150px] lg:w-[150px] lg:h-[120px] rounded-full lg:rounded-lg" src="${post.image}" alt="">
     </div>
     <div class="ml-6 mt-6  w-full lg:mt-0 lg:ml-10">
       <div class="flex text-center">
